@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--========== BOX ICONS ==========-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+        <!--========== CSS ==========-->
+        <link rel="stylesheet" href="../../css/style.css">
+            <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+        <title>Página Inicial</title>
+    </head>
+    <body>
+        <div class="header__toggle">
+            <i class='bx bx-menu' id="header-toggle"></i>
+        </div>
+        <!--========== HEADER ==========-->
+        <header class="header">
+            <div class="header__container">
+                <a href="http://olimpiadadecartografia.uff.br/"><img src="../../images/obrac.png" alt="" class="header__img obrac"></a>
+                <a href="https://www.cefetmg.br/"><img src="../../images/cefet.png" alt="" class="header__img cefet"></a>
+                <a href="https://www.gov.br/cnpq/pt-br"><img src="../../images/cnpq.png" alt="" class="header__img cnpq"></a>
+            </div>
+        </header>
+        <!--========== NAV ==========-->
+        <div class="nav" id="navbar">
+            <nav class="nav__container">
+                <div>
+                    <a class="nav__logo">
+                        <i class='bx bx-menu nav__icon' ></i>
+                        <span class="nav__logo-name">Menu</span>
+                    </a>
+    
+                    <div class="nav__list">
+                        <div class="nav__items">
+                            <br>
+                            <br>
+                            <a href="#" class="nav__link" onclick="mapahome();">
+                                <i class='bx bx-home nav__icon' ></i>
+                                <span class="nav__name">Início</span>
+                            </a>
+                            <div class="nav__dropdown">
+                                <a href="#" class="nav__link active">
+                                    <i class='bx bx-map-alt nav__icon' ></i>
+                                    <span class="nav__name">Mapas</span>
+                                    <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                                </a>
+
+                                <div class="nav__dropdown-collapse">
+                                    <div class="nav__dropdown-content">
+                                        <a href="#" class="nav__dropdown-item active" onclick="mapa2020();">2020</a>
+                                        <a href="#" class="nav__dropdown-item" onclick="mapa2010();">2010</a>
+                                        <a href="#" class="nav__dropdown-item" onclick="mapa2000();">2000</a>
+                                        <a href="#" class="nav__dropdown-item" onclick="mapa1990();">1990</a>
+                                        <a href="#" class="nav__dropdown-item" onclick="mapa1985();">1985</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="nav__link" onclick="mapaanalise();">
+                                <i class='bx bx-pie-chart-alt-2 nav__icon' ></i>
+                                <span class="nav__name">Análises</span>
+                            </a>
+                        </div>
+    
+                        <div class="nav__items">
+                            <h3 class="nav__subtitle">OBRAC 2021</h3>
+                            <a href="#" class="nav__link" onclick="mapacurta();">
+                                <i class='bx bx-camera-movie nav__icon' ></i>
+                                <span class="nav__name">Curta Metragem</span>
+                            </a>
+
+                            <a href="#" class="nav__link" onclick="mapacolecao();">
+                                <i class='bx bx-compass nav__icon' ></i>
+                                <span class="nav__name">Coleção de Mapas</span>
+                            </a>
+                            <a href="#" class="nav__link" onclick="mapafasefinal();">
+                                <i class='bx bx-run nav__icon' ></i>
+                                <span class="nav__name">Fase Final</span>
+                            </a>
+
+                            <a href="#" class="nav__link" onclick="mapasobrenos();">
+                                <i class='bx bx-male-female nav__icon' ></i>
+                                <span class="nav__name">Sobre Nós</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav__logout">
+                    <div class="nav__name"><i class='bx bx-trophy nav__icon'></i>Equipe de Milhões<br> OBRAC 2021</div>
+                  </div>
+                </div>
+            </nav>
+        </div>
+        <!--========== CONTENTS ==========-->
+        <main>
+            <section>
+            <section class="content">
+                <h1 class="maptitle">Microrregião de Divinópolis - 2020</h1>
+                <div class="linewhite"></div>
+                <div class="texto"><p>O WebMapa é uma uma extensão
+                    do trabalho realizado na etapa II fase II da OBRAC. Neste trabalho é possível visualizar os mapas
+                    confeccionados de forma dinâmica.
+                    Explore a Microrregião de Divinópolis no ano de 2020, descubra as ferramentas interativas
+                    disponíveis no mapa, compare com os outros anos através do menu lateral e preceba as mudanças que ocorreram na
+                    região.</p></div>
+            </section>
+                    <iframe src="WEB_2020/index.html" frameborder="0" class="webmapa">
+                  </iframe>
+            <section class="content">
+                <div class="caption"><img src="../../images/imagens_mapa/LEGENDA.png"></div>
+            </section>
+            </section>
+
+        </main>
+
+        <!--=============== RODAPÉ ===========-->
+        <footer id="myFooter" class="footer">
+            <div class="footer-social">
+                <a href="https://mapbiomas.org/" class="social-icons"><i class="fad"><img src="../../images/mapbiomas.png"></i></a>
+                <a href="https://www.ibge.gov.br/estatisticas/sociais/populacao/22827-censo-2020-censo4.html?=&t=destaques" class="social-icons"><i class="fad"><img src="../../images/ibge.png" ></i></a>
+                <p class="footer-copyright">
+                    "Coleção de SIGWEBS da Microrregião de Divinópolis, acessado em 21/06/2022 através do link: https://mapbiomas.org/"<br>
+                    "Projeto MapBiomas - é uma iniciativa multi-institucional para gerar mapas anuais de cobertura e uso do solo a partir de processos de classificação automática aplicada a imagens de satélite.”
+                    </p>
+                <p class="footer-copyright">
+                INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍTICA - IBGE. Censo Demográfico 1980 - 2010. Disponível em: https://www.ibge.gov.br/estatisticas/sociais/populacao/22827-censo-2020-censo4.html?=&t=destaques
+                <br>O censo demográfico é realizado pelo IBGE (Instituto Brasileiro de Geografia e Estatística) e consiste em um estudo sobre a população com base no recolhimento de informações. Normalmente esse estudo é realizado de 10 em 10 anos. 
+               </p>
+                <p class="footer-copyright">© 2022 - Centro Federal de Educação Tecnológica de Minas Gerais</p>
+              </div>
+          </footer>
+        <!--========== MAIN JS ==========-->
+        <script src="../../js/app.js"></script>
+        <script>
+            window.onload=function(){
+var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+if (mobile) {
+    alert("Alguns recursos podem ser limitados pelo celular. Acesse pelo computador para uma melhor experiência!");              
+} else {
+
+}
+}
+    </script>
+    </body>
+</html>

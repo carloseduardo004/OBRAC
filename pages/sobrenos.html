@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--========== BOX ICONS ==========-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+        <!--========== CSS ==========-->
+        <link rel="stylesheet" href="../css/style.css">
+        
+        <title>Sobre Nós</title>
+    </head>
+    <body>
+        <div class="header__toggle">
+            <i class='bx bx-menu' id="header-toggle"></i>
+        </div>
+        <!--========== HEADER ==========-->
+        <header class="header">
+            <div class="header__container">
+                <a href="http://olimpiadadecartografia.uff.br/"><img src="../images/obrac.png" alt="" class="header__img obrac"></a>
+                <a href="https://www.cefetmg.br/"><img src="../images/cefet.png" alt="" class="header__img cefet"></a>
+                <a href="https://www.gov.br/cnpq/pt-br"><img src="../images/cnpq.png" alt="" class="header__img cnpq"></a>
+            </div>
+        </header>
+        <!--========== NAV ==========-->
+        <div class="nav" id="navbar">
+            <nav class="nav__container">
+                <div>
+                    <a class="nav__logo">
+                        <i class='bx bx-menu nav__icon' ></i>
+                        <span class="nav__logo-name">Menu</span>
+                    </a>
+    
+                    <div class="nav__list">
+                        <div class="nav__items">
+                            <br>
+                            <br>
+                            <a href="#" class="nav__link" onclick="home();">
+                                <i class='bx bx-home nav__icon' ></i>
+                                <span class="nav__name">Início</span>
+                            </a>
+                            <div class="nav__dropdown">
+                                <a href="#" class="nav__link">
+                                    <i class='bx bx-map-alt nav__icon' ></i>
+                                    <span class="nav__name">Mapas</span>
+                                    <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                                </a>
+
+                                <div class="nav__dropdown-collapse">
+                                    <div class="nav__dropdown-content">
+                                        <a href="#" class="nav__dropdown-item" onclick="click2020();">2020</a>
+                                        <a href="#" class="nav__dropdown-item" onclick="click2010();">2010</a>
+                                        <a href="#" class="nav__dropdown-item" onclick="click2000();">2000</a>
+                                        <a href="#" class="nav__dropdown-item" onclick="click1990();">1990</a>
+                                        <a href="#" class="nav__dropdown-item" onclick="click1985();">1985</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="nav__link" onclick="clickanalise();">
+                              <i class='bx bx-pie-chart-alt-2 nav__icon' ></i>
+                              <span class="nav__name">Análises</span>
+                          </a>
+                        </div>
+    
+                        <div class="nav__items">
+                            <h3 class="nav__subtitle">OBRAC 2021</h3>
+                            <a href="#" class="nav__link" onclick="clickcurta();">
+                                <i class='bx bx-camera-movie nav__icon' ></i>
+                                <span class="nav__name">Curta Metragem</span>
+                            </a>
+
+                            <a href="#" class="nav__link" onclick="clickcolecao();">
+                                <i class='bx bx-compass nav__icon' ></i>
+                                <span class="nav__name">Coleção de Mapas</span>
+                            </a>
+                            <a href="#" class="nav__link" onclick="clickfasefinal();">
+                                <i class='bx bx-run nav__icon' ></i>
+                                <span class="nav__name">Fase Final</span>
+                            </a>
+
+                            <a href="#" class="nav__link active" onclick="clicksobrenos();">
+                                <i class='bx bx-male-female nav__icon' ></i>
+                                <span class="nav__name">Sobre Nós</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav__logout">
+                    <div class="nav__name"><i class='bx bx-trophy nav__icon'></i>Equipe de Milhões<br> OBRAC 2021</div>
+                  </div>
+                </div>
+            </nav>
+        </div>
+        <!--========== CONTENTS ==========-->
+        <main>
+            <section class="content">
+                <h2 class="title">Nossa equipe</h2>
+                <div class="linewhite"></div>
+                <div class="row row-cols-1 row-cols-md-4 g-4">
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="../images/sobre/Carlos.png" class="card-img-top"/>
+                        <div class="card-body">
+                          <h5 class="card-title">Carlos Eduardo</h5>
+                          <span class="email">carlosedumachado00@gmail.com</span><br><br>
+                          <p class="card-text">
+                            Estudante do Curso Técnico de Informática no CEFET-MG Divinópolis.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="../images/sobre/Leticia.png" class="card-img-top"/>
+                        <div class="card-body">
+                          <h5 class="card-title">Letícia</h5>
+                          <span class="email">leticiavictoria.n.silva@gmail.com</span><br><br>
+                          <p class="card-text">Estudante do Curso Técnico de Produção de Moda no CEFET-MG Divinópolis.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="../images/sobre/Lucas.png" class="card-img-top"/>
+                        <div class="card-body">
+                          <h5 class="card-title">Lucas</h5>
+                          <span class="email">lucasmartinsnogueira13579@gmail.com</span><br><br>
+                          <p class="card-text">Estudante do Curso Técnico de Informática no CEFET-MG Divinópolis.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="../images/sobre/Sophia.png" class="card-img-top"/>
+                        <div class="card-body">
+                          <h5 class="card-title">Sophia</h5>
+                          <span class="email">sophialimaprezende@gmail.com</span><br><br>
+                          <p class="card-text">Estudante do Curso Técnico de Produção de Moda no CEFET-MG Divinópolis</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <h3>Sobre Nós</h3>
+            <p> Nossa história juntos como equipe da OBRAC começou em abril de 2021, em meio a pandemia do COVID-19, quando surgiram notícias de que o CEFET iria participar da Olimpíada e estava à procura de alunos que estivessem interessados.
+                Apesar do CEFET já ter sido campeão na edição anterior, apenas os quatro alunos demonstraram interesse em participar. Por esse motivo não houve processo seletivo. A equipe campeã de quatro integrantes já estava formada.
+            </p>
+            <p>
+                Os estudantes foram orientados pela professora de geografia, Nádia Mello, que já havia orientado outras equipes anteriormente.
+                Passaram, então, pelas duas primeiras etapas da Olimpíada. Duas provas teóricas, com questões que envolviam diversas áreas da geografia, como a cartografia e topografia. Além de questões de matemática e física.
+            </p>
+            <p>As primeiras fases da segunda etapa fizeram com que todos os integrantes se conhecessem pessoalmente pela primeira vez através da gravação do curta-metragem “Onde o Sol se Põe”. Já a segunda fase, fez com que os laços da equipe se estreitassem por meio de longas reuniões virtuais.
+              A terceira e última fase, foi uma viagem para Niterói (RJ) em que os estudantes tiveram a oportunidade de conhecer outros participantes de diferentes cidades e federações do Brasil. Esse intercâmbio de relações pessoais e interesses cartográficos fez com que a OBRAC se tornasse uma memória inesquecível para a equipe</p>
+            <p>“O talento vence jogos, mas só o trabalho em equipe ganha campeonatos” - Michael Jordan. Para vencer uma olimpíada como a OBRAC não basta apenas ter uma equipe de estudantes engajada, dinâmica e disposta, também depende de muitas pessoas por de trás. 
+                Pessoas que apoiam, ajudam, dão suporte, cuidam e motivam.</p>  
+              <h2 class="title">Apoiadores CEFET-MG</h2>
+                <div class="linewhite"></div>
+                <div class="row row-cols-1 row-cols-md-4 g-4">
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="../images/sobre/Rodrigo.png" class="card-img-top"/>
+                        <div class="card-body">
+                          <h5 class="card-title">Prof. Dr. Rodrigo Bessa (Orientador)</h5>
+                          <p class="card-text">
+                            Professor do curso técnico de Produção de Moda e do curso de Design de Moda do CEFET-MG Divinópolis
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="../images/sobre/Paula.png" class="card-img-top"/>
+                        <div class="card-body">
+                          <h5 class="card-title">Profa. Msa. Paula Resende</h5>
+                          <p class="card-text">Professora de geografia do CEFET-MG Belo Horizonte</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="../images/sobre/Nadia.png" class="card-img-top"/>
+                        <div class="card-body">
+                          <h5 class="card-title">Profa. Dra. Nádia Cristina</h5>
+                          <p class="card-text">Professora de geografia do CEFET-MG Divinópolis</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="../images/sobre/Leninha.png" class="card-img-top"/>
+                        <div class="card-body">
+                          <h5 class="card-title">Helena Maria da Silva</h5>
+                          <p class="card-text">Enfermeira Médica do CEFET-MG Divinópolis</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div><br>
+                  <h2 class="title">Apoiadores UFF</h2>
+                  <div class="linewhite" style="width: 50%;"></div>
+                  <div class="row row-cols-1 row-cols-md-3 g-4 uff">
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="../images/sobre/Angelica.png" class="card-img-top"/>
+                        <div class="card-body">
+                          <h5 class="card-title">Angelica C. Di Maio</h5>
+                          <p class="card-text">
+                            Diretora do Instituto de Geociências UFF.<br>
+                            Doutorado em Geografia (Análise da Informação Espacial)
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="../images/sobre/Marcus.png" class="card-img-top"/>
+                        <div class="card-body">
+                          <h5 class="card-title">Prof. Dr. Marcus Vinícius A. de Carvalho</h5>
+                          <p class="card-text">
+                            Professor do Depto. de Análise Geoambiental. Doutorado em Geografia (Área de Concentração: Ordenamento Territorial Ambiental)</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col uf">
+                      <div class="card h-100">
+                        <img src="../images/sobre/Kellen.png" class="card-img-top"/>
+                        <div class="card-body">
+                          <h5 class="card-title">Profa. Kellen Milene</h5>
+                          <p class="card-text">Pós-graduada em Metodologia do Ensino em Geografia
+                             Licenciatura em Geografia.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div><br>
+                  <h3 class="title">Agradecimentos</h3>
+                  <div class="linewhite"></div>
+                  <p>Foi um enorme prazer representar o CEFET-MG na Olímpiada Brasileira de Cartografia. Essa experiência nos trouxe diversos conhecimentos que levaremos para o resto da vida.
+                    Alguns de nós estavam viajando de avião pela primeira vez, outros estavam vendo a praia e visitando outro estado pela primeira vez. Tudo isso graças à educação e àos projetos acadêmicos de pesquisa e extensão, que visam espalhar o conhecimento pelo país.
+                </p>
+                <p>Apesar dos momentos desafiadores, hoje podemos dizer que valeu a pena cada hora gastas com reuniões onlines, produção de relatório e programação. Ganhamos uma viagem, obtivemos novos conhecimentos e novas experiências, adquirimos novas habilidades e conquistamos um projeto de iniciação científica.
+                    Só temos a agradecer a todos aqueles que nos ajudaram e acreditaram no nosso potêncial. E esperamos que no futuro esse trabalho venha a inspirar novos alunos.</p>
+            </section>
+        </main>
+        <!--=============== RODAPÉ ===========-->
+        <footer id="myFooter" class="footer">
+            <div class="footer-social">
+                <a href="https://www.facebook.com/olimpiadabrasileiradecartografia" class="social-icons"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/obrac_cartografia/" class="social-icons"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.youtube.com/obracuff" class="social-icons"><i class="fa fa-youtube"></i></a>
+                <p class="footer-copyright">© 2022 - Centro Federal de Educação Tecnológica de Minas Gerais</p>
+              </div>
+          </footer>
+        <!--========== MAIN JS ==========-->
+        <script src="../js/app.js"></script>
+    </body>
+</html>

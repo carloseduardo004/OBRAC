@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--========== BOX ICONS ==========-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+        <!--========== CSS ==========-->
+        <link rel="stylesheet" href="../css/style.css">
+            <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+        <title>Curta Metragem</title>
+    </head>
+    <body>
+        <div class="header__toggle">
+            <i class='bx bx-menu' id="header-toggle"></i>
+        </div>
+        <!--========== HEADER ==========-->
+        <header class="header">
+            <div class="header__container">
+                <a href="http://olimpiadadecartografia.uff.br/"><img src="../images/obrac.png" alt="" class="header__img obrac"></a>
+                <a href="https://www.cefetmg.br/"><img src="../images/cefet.png" alt="" class="header__img cefet"></a>
+                <a href="https://www.gov.br/cnpq/pt-br"><img src="../images/cnpq.png" alt="" class="header__img cnpq"></a>
+            </div>
+        </header>
+        <!--========== NAV ==========-->
+        <div class="nav" id="navbar">
+            <nav class="nav__container">
+                <div>
+                    <a class="nav__logo">
+                        <i class='bx bx-menu nav__icon' ></i>
+                        <span class="nav__logo-name">Menu</span>
+                    </a>
+    
+                    <div class="nav__list">
+                        <div class="nav__items">
+                            <br>
+                            <br>
+                            <a href="#" class="nav__link" onclick="home();">
+                                <i class='bx bx-home nav__icon' ></i>
+                                <span class="nav__name">Início</span>
+                            </a>
+                            <div class="nav__dropdown">
+                                <a href="#" class="nav__link">
+                                    <i class='bx bx-map-alt nav__icon' ></i>
+                                    <span class="nav__name">Mapas</span>
+                                    <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                                </a>
+
+                                <div class="nav__dropdown-collapse">
+                                    <div class="nav__dropdown-content">
+                                        <a href="#" class="nav__dropdown-item" onclick="click2020();">2020</a>
+                                        <a href="#" class="nav__dropdown-item" onclick="click2010();">2010</a>
+                                        <a href="#" class="nav__dropdown-item" onclick="click2000();">2000</a>
+                                        <a href="#" class="nav__dropdown-item" onclick="click1990();">1990</a>
+                                        <a href="#" class="nav__dropdown-item" onclick="click1985();">1985</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="nav__link" onclick="clickanalise();">
+                                <i class='bx bx-pie-chart-alt-2 nav__icon' ></i>
+                                <span class="nav__name">Análises</span>
+                            </a>
+                        </div>
+    
+                        <div class="nav__items">
+                            <h3 class="nav__subtitle">OBRAC 2021</h3>
+                            <a href="#" class="nav__link active" onclick="clickcurta();">
+                                <i class='bx bx-camera-movie nav__icon' ></i>
+                                <span class="nav__name">Curta Metragem</span>
+                            </a>
+
+                            <a href="#" class="nav__link" onclick="clickcolecao();">
+                                <i class='bx bx-compass nav__icon' ></i>
+                                <span class="nav__name">Coleção de Mapas</span>
+                            </a>
+                            <a href="#" class="nav__link" onclick="clickfasefinal();">
+                                <i class='bx bx-run nav__icon' ></i>
+                                <span class="nav__name">Fase Final</span>
+                            </a>
+
+                            <a href="#" class="nav__link" onclick="clicksobrenos();">
+                                <i class='bx bx-male-female nav__icon' ></i>
+                                <span class="nav__name">Sobre Nós</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav__logout">
+                    <div class="nav__name"><i class='bx bx-trophy nav__icon'></i>Equipe de Milhões<br> OBRAC 2021</div>
+                  </div>
+                </div>
+            </nav>
+        </div>
+        <!--========== CONTENTS ==========-->
+        <main>
+        <section>
+            <section class="content">
+                <h2 class="title">Curta Metragem</h2>
+                <div class="linewhite"></div>
+            </section>
+            <div class="line"></div>
+            <!-- Carousel wrapper -->
+            <div id="carouselBasicExample" class="carousel slide carousel-fade" data-mdb-ride="carousel" style="background-color: black;">
+                <!-- Indicators -->
+                <div class="carousel-indicators">
+                <button
+                    type="button"
+                    data-mdb-target="#carouselBasicExample"
+                    data-mdb-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                ></button>
+                <button
+                    type="button"
+                    data-mdb-target="#carouselBasicExample"
+                    data-mdb-slide-to="1"
+                    aria-label="Slide 2"
+                ></button>
+                <button
+                    type="button"
+                    data-mdb-target="#carouselBasicExample"
+                    data-mdb-slide-to="2"
+                    aria-label="Slide 3"
+                ></button>
+                <button
+                type="button"
+                data-mdb-target="#carouselBasicExample"
+                data-mdb-slide-to="3"
+                aria-label="Slide 4"
+                ></button>
+                <button
+                type="button"
+                data-mdb-target="#carouselBasicExample"
+                data-mdb-slide-to="4"
+                aria-label="Slide 5"
+                ></button>
+                <button
+                type="button"
+                data-mdb-target="#carouselBasicExample"
+                data-mdb-slide-to="5"
+                aria-label="Slide 6"
+                ></button>
+                </div>
+                <!-- Inner -->
+                <div class="carousel-inner">
+                <!-- LUCAS -->
+                <div class="carousel-item active">
+                    <img src="../images/curta/Slider 1.png" class="d-block w-100 slider"/>
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>Um curta metragem</h5>
+                    <p>A 1ª etapa da fase prática da OBRAC 2021 foi a produção de um curta.</p>
+                    </div>
+                </div>
+                <!--PRAÇA-->
+                <div class="carousel-item">
+                    <img src="../images/curta/Slider 2.png" class="d-block w-100 slider"/>
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>Inicio das gravações</h5>
+                    <p>Com o roteiro pronto se iniciaram as gravações.</p>
+                    </div>
+                </div>
+                <!-- EQUIPE -->
+                <div class="carousel-item">
+                    <img src="../images/curta/Slider 3.png" class="d-block w-100 slider"/>
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>Trabalho em equipe</h5>
+                    <p>Conhecemos mais uns aos outros, e aprendemos a trabalhar em equipe.</p>
+                    </div>
+                </div>
+                <!-- RODRIGO -->
+                <div class="carousel-item">
+                    <img src="../images/curta/Slider 5.png" class="d-block w-100 slider"/>
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>Apoio e aprendizagem constantes</h5>
+                    <p>Aprendemos muitas técnicas de filmagens e gravação com apoio do professor orientador.</p>
+                    </div>
+                </div>
+                <!--CRUZ-->
+                <div class="carousel-item">
+                    <img src="../images/curta/Slider7C.png" class="d-block w-100 slider"/>
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>Final Marcante</h5>
+                    <p>Um final surpreendente com cenas de tirar o folego!</p>
+                    </div>
+                </div>
+                 <!-- MESTRA -->
+                 <div class="carousel-item">
+                    <img src="../images/curta/Slider 4.png" class="d-block w-100 slider"/>
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>O mistério!</h5>
+                    <p>Quem está por trás das cartas e dos mapas?</p>
+                    </div>
+                </div>
+                </div>
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+            <!-- Carousel wrapper -->
+            <div class="line"></div>
+            <section class="content">
+                <div class="texto">
+                <p> A etapa II fase I da OBRAC propôs aos alunos uma atividade relativas à Arte e à Cartografia, pretendendo promover uma reflexão sobre as capacidades cartográficas das iamgens, inclusive das iamgens fílmicas.</p>
+                <p> O desafio era criar um curta metragem com o tema de cartografia. Então, inspirados pelas belezas naturais, arquitetura, história e momumentos da cidade de Divinópolis, os estudantes decidiram realizar um curta metragem com enfoque na cidade.</p>
+                <p> A equipe construiu um roteiro, storyboards, ordem do dia, além de um cronograma de gravações. O professor Rodrigo Bessa foi fundamental nessa etapa da olimpíada devido aos seu vasto conhecimento sobre a arte do cinema.
+                Levando em conta o tempo limite de duração e as limitações tecnológicas o grupo decidiu representar uma corrida de orientação</p>
+                <p>Com esse conceito, foi formulada a ideia de uma corrida em forma de jogo RPG que percorreria por pontos importantes de Divinópolis, equanto são explicitados conceitos e práticas importantes da ciência cartográfica.</p>
+                <h2 class="title">Sinopse:</h2>
+                <p> Três jovens recebem pelos correios cartas misteriosas os convidando a participar de um jogo. Eles, então, aceitam o desafio em busca de uma premiação. 
+                A partir de três pontos distintos da cidade de Divinópolis eles iniciam uma intensa corrida, utilizando de ferramentas e de técnicas cartográficas. Durante
+                toda essa jornada os jovês são guiados por uma Mestra para atingirem os objetivos do jogo.</p>
+                </div>
+                <section class="video">
+                    <iframe class="iframe" src="https://www.youtube.com/embed/67ors6V8nTE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; gyroscope" allowfullscreen></iframe>
+                </section>
+                <div class="linewhite"></div>
+                <br>
+                    <p>Quer saber mais detalhes sobre como foi todo o processo de produção dessa etapa? <br>Confira nossos arquivos e relatórios.</p>
+                        <div class="btn-group dropup" >
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-mdb-toggle="dropdown" aria-expanded="false" style="background-color: #488188;">
+                              Arquivos
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="https://www.youtube.com/watch?v=eaTu3nFGZHk&t=235s" target="_blank">Relato Em Vídeo</a></li>
+                              <li><a class="dropdown-item" href="../docs/Relato_Curta_Metragem.pdf" target="_blank">Relatório</a></li>
+                              <li><a class="dropdown-item" href="../docs/StoryBoard_Curta_Metragem.pdf" target="_blank">StoryBoard</a></li>
+                            </ul>
+                          </div>
+            </section>
+            </section>
+        </main>
+        <!--=============== RODAPÉ ===========-->
+        <footer id="myFooter" class="footer">
+            <div class="footer-social">
+                <a href="https://www.facebook.com/olimpiadabrasileiradecartografia" class="social-icons"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/obrac_cartografia/" class="social-icons"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.youtube.com/obracuff" class="social-icons"><i class="fa fa-youtube"></i></a>
+                <p class="footer-copyright">© 2022 - Centro Federal de Educação Tecnológica de Minas Gerais</p>
+              </div>
+          </footer>
+        <!--========== MAIN JS ==========-->
+        <script src="../js/app.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>

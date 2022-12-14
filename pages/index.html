@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--========== BOX ICONS ==========-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <!--========== CSS ==========-->
+        <link rel="stylesheet" href="../css/style.css">
+
+        <title>Página Inicial</title>
+    </head>
+    <body>
+        <div class="header__toggle">
+            <i class='bx bx-menu' id="header-toggle"></i>
+        </div>
+        <!--========== HEADER ==========-->
+        <header class="header">
+            <div class="header__container">
+                <a href="http://olimpiadadecartografia.uff.br/"><img src="../images/obrac.png" alt="" class="header__img obrac"></a>
+                <a href="https://www.cefetmg.br/"><img src="../images/cefet.png" alt="" class="header__img cefet"></a>
+                <a href="https://www.gov.br/cnpq/pt-br"><img src="../images/cnpq.png" alt="" class="header__img cnpq"></a>
+            </div>
+        </header>
+        <!--========== NAV ==========-->
+        <div class="nav" id="navbar">
+            <nav class="nav__container">
+                <div>
+                    <a class="nav__logo">
+                        <i class='bx bx-menu nav__icon' ></i>
+                        <span class="nav__logo-name">Menu</span>
+                    </a>
+    
+                    <div class="nav__list">
+                        <div class="nav__items">
+                            <br>
+                            <br>
+                            <a href="#" class="nav__link active" onclick="home();">
+                                <i class='bx bx-home nav__icon' ></i>
+                                <span class="nav__name">Início</span>
+                            </a>
+                            <div class="nav__dropdown">
+                                <a href="#" class="nav__link">
+                                    <i class='bx bx-map-alt nav__icon' ></i>
+                                    <span class="nav__name">Mapas</span>
+                                    <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                                </a>
+
+                                <div class="nav__dropdown-collapse">
+                                    <div class="nav__dropdown-content">
+                                        <a href="#" class="nav__dropdown-item" onclick="click2020();">2020</a>
+                                        <a href="#" class="nav__dropdown-item" onclick="click2010();">2010</a>
+                                        <a href="#" class="nav__dropdown-item" onclick="click2000();">2000</a>
+                                        <a href="#" class="nav__dropdown-item" onclick="click1990();">1990</a>
+                                        <a href="#" class="nav__dropdown-item" onclick="click1985();">1985</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="nav__link" onclick="clickanalise();">
+                                <i class='bx bx-pie-chart-alt-2 nav__icon' ></i>
+                                <span class="nav__name">Análises</span>
+                            </a>
+                        </div>
+    
+                        <div class="nav__items">
+                            <h3 class="nav__subtitle">OBRAC 2021</h3>
+                            <a href="#" class="nav__link" onclick="clickcurta();">
+                                <i class='bx bx-camera-movie nav__icon' ></i>
+                                <span class="nav__name">Curta Metragem</span>
+                            </a>
+
+                            <a href="#" class="nav__link" onclick="clickcolecao();">
+                                <i class='bx bx-compass nav__icon' ></i>
+                                <span class="nav__name">Coleção de Mapas</span>
+                            </a>
+                            <a href="#" class="nav__link" onclick="clickfasefinal();">
+                                <i class='bx bx-run nav__icon' ></i>
+                                <span class="nav__name">Fase Final</span>
+                            </a>
+
+                            <a href="#" class="nav__link" onclick="clicksobrenos();">
+                                <i class='bx bx-male-female nav__icon' ></i>
+                                <span class="nav__name">Sobre Nós</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav__logout">
+                    <div class="nav__name"><i class='bx bx-trophy nav__icon'></i>Equipe de Milhões<br> OBRAC 2021</div>
+                  </div>
+                </div>
+            </nav>
+        </div>
+        <!--========== CONTENTS ==========-->
+        <main>
+                <section class="content">
+                 <h2 class="title">O Projeto</h2>
+                 <div class="linewhite"></div>
+                 <h5 class="title texto"><b>Microrregião de Divinópolis, Minas Gerais - Análise do uso e cobertura da terra na região, no período que engloba os anos de 1985, 1990, 2000, 2010 e 2020.</b></h5>
+                 <p class="texto">
+                    Este projeto é consequência da premiação feita a quatro alunos do CEFET-MG Divinópolis, que receberam como agraciação da OBRAC (Olimpíada Brasileira de Cartografia) uma bolsa CNPq (Conselho Nacional de Desenvolvimento Científico e Tecnológico) de iniciação científica para dar continuidade aos trabalhos realizados durante a olimpíada.
+                    O objetivo principal da OBRAC é divulgar a Ciência Cartográfica entre as escolas de forma dinâmica e eficiente, trazendo tópicos de alta relevância para a aprendizagem no geral.
+                     Sendo executada em fases e etapas, a OBRAC avalia e ranqueia as equipes participantes através de provas teóricas e provas práticas, que abrangem diversos conhecimentos e habilidades. 
+                     Assim, as três equipes que chegam a etapa final, recebem como premiação uma viagem para o Rio de Janeiro. O objetivo desta viagem é fazer com que as 3 equipes compitam entre si em uma corrida de orientação, para que então possa haver a classificação final. 
+                     Além da medalha de ouro e presentes entregues por instituições governamentais, a equipe que conquista o primeiro lugar recebe uma bolsa ICJ (Iniciação Científica Júnior) para dar continuidade a um dos projetos produzido durante a olimpíada.
+                 </p>
+                 <p class="texto">
+                    A coleção de mapas foi desenvolvida uma das etapas da OBRAC, visando representar as mudanças ou mesmo transformações que ocorreram temporalmente. Criada com o auxílio das plataformas QGIS (Sistema de Informações Geográfica), MapBiomas e Google Earth Engine, apresenta informações acerca da Cobertura da terra no Bioma da Microrregião de Divinópolis - MG. 
+                    Tal temática foi inspirada através das aulas de geografia urbana, que instigou a equipe a entender como a cobertura da terra da região foi alterada nos últimos anos. 
+                    Com as informações presentes nos mapas é possível analisar tópicos específicos, sendo eles agropecuária, hidrografia, desmatamento e urbanização. Ao estender esse material para a comunidade, professores poderão apresentar esse conteúdo em sala, tornando o material relevante principalmente para aulas de geografia em cidades da microrregião de Divinópolis. 
+                    Além de que ele poderá ser usado para outros estudos.
+                    Com os dados da coleção de mapas, foram produzidos Web Mapas através do sistema SigWeb (Sistema de Informações Geográficas). Nesse programa é possível criar mapas colocando as informações geográficas de forma que facilite a compreensão dos dados.
+                 </p>
+                 <br>
+                </section>
+        </main>
+        <!--=============== RODAPÉ ===========-->
+        <footer id="myFooter" class="footer">
+            <div class="footer-social">
+                <a href="https://www.facebook.com/olimpiadabrasileiradecartografia" class="social-icons"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/obrac_cartografia/" class="social-icons"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.youtube.com/obracuff" class="social-icons"><i class="fa fa-youtube"></i></a>
+                <p class="footer-copyright">© 2022 - Centro Federal de Educação Tecnológica de Minas Gerais</p>
+              </div>
+          </footer>
+        <!--========== MAIN JS ==========-->
+        <script src="../js/app.js"></script>
+    </body>
+</html>

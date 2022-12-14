@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--========== BOX ICONS ==========-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+        <!--========== CSS ==========-->
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/timelinecolecao.css">
+        <style>.card{
+            pointer-events: none;}
+        </style>
+        <title>Coleção de Mapas</title>
+    </head>
+    <body>
+        <div class="header__toggle">
+            <i class='bx bx-menu' id="header-toggle"></i>
+        </div>
+        <!--========== HEADER ==========-->
+        <header class="header">
+            <div class="header__container">
+                <a href="http://olimpiadadecartografia.uff.br/"><img src="../images/obrac.png" alt="" class="header__img obrac"></a>
+                <a href="https://www.cefetmg.br/"><img src="../images/cefet.png" alt="" class="header__img cefet"></a>
+                <a href="https://www.gov.br/cnpq/pt-br"><img src="../images/cnpq.png" alt="" class="header__img cnpq"></a>
+            </div>
+        </header>
+        <!--========== NAV ==========-->
+        <div class="nav" id="navbar">
+            <nav class="nav__container">
+                <div>
+                    <a class="nav__logo">
+                        <i class='bx bx-menu nav__icon' ></i>
+                        <span class="nav__logo-name">Menu</span>
+                    </a>
+    
+                    <div class="nav__list">
+                        <div class="nav__items">
+                            <br>
+                            <br>
+                            <a href="#" class="nav__link" onclick="home();">
+                                <i class='bx bx-home nav__icon'></i>
+                                <span class="nav__name">Início</span>
+                            </a>
+                            <div class="nav__dropdown">
+                                <a class="nav__link">
+                                    <i class='bx bx-map-alt nav__icon' ></i>
+                                    <span class="nav__name">Mapas</span>
+                                    <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                                </a>
+
+                                <div class="nav__dropdown-collapse">
+                                    <div class="nav__dropdown-content">
+                                        <a href="#" class="nav__dropdown-item" onclick="click2020();">2020</a>
+                                        <a href="#" class="nav__dropdown-item" onclick="click2010();">2010</a>
+                                        <a href="#" class="nav__dropdown-item" onclick="click2000();">2000</a>
+                                        <a href="#" class="nav__dropdown-item" onclick="click1990();">1990</a>
+                                        <a href="#" class="nav__dropdown-item" onclick="click1985();">1985</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="nav__link" onclick="clickanalise();">
+                              <i class='bx bx-pie-chart-alt-2 nav__icon' ></i>
+                              <span class="nav__name">Análises</span>
+                          </a>
+                        </div>
+    
+                        <div class="nav__items">
+                            <h3 class="nav__subtitle">OBRAC 2021</h3>
+                            <a href="#" class="nav__link" onclick="clickcurta();">
+                                <i class='bx bx-camera-movie nav__icon' ></i>
+                                <span class="nav__name">Curta Metragem</span>
+                            </a>
+
+                            <a href="#" class="nav__link active" onclick="clickcolecao();">
+                                <i class='bx bx-compass nav__icon' ></i>
+                                <span class="nav__name">Coleção de Mapas</span>
+                            </a>
+                            <a href="#" class="nav__link" onclick="clickfasefinal();">
+                                <i class='bx bx-run nav__icon' ></i>
+                                <span class="nav__name">Fase Final</span>
+                            </a>
+
+                            <a href="#" class="nav__link" onclick="clicksobrenos();">
+                                <i class='bx bx-male-female nav__icon' ></i>
+                                <span class="nav__name">Sobre Nós</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav__logout">
+                    <div class="nav__name"><i class='bx bx-trophy nav__icon'></i>Equipe de Milhões<br> OBRAC 2021</div>
+                  </div>
+                </div>
+            </nav>
+        </div>
+        <!--========== CONTENTS ==========-->
+        <main>
+            <section class="content">
+                <h2 class="title">Coleção de Mapas </h2>
+                <div class="linewhite"></div>
+                <div class="texto">
+                <p>
+                A coleção de mapas foi a atividade proposta pela OBRAC na etapa II fase II da edição de 2021.
+                Nesta atividade, as equipes participantes foram desafiadas a produzirem uma coleção de mapas, cuja o tema era "Uma Viagem no Tempo". 
+                Os mapas deveriam representar uma série histórica que retraria um bairro, um município, ou ainda um bioma, podendo ser em sua totaidade ou parte dele.
+                Desta forma, a equipe produziu uma coleção sobre o uso e cobertura da terra na Microrregião de Divinópolis que está situada no bioma cerrado.
+                </p>
+                <p>
+                Elaborados através do QGIS (Software de Geoprocessamento) a coleção engloba os anos de 1985, 1990, 2000, 2010 e 2020. 
+                A coleção consegue representar de forma didática e intuitiva os dados que foram extraídos do IBGE e MAPBIOMAS das onze cidades que compõem a microrregião.
+                </p>
+                <p>
+                Esse projeto significa, portanto, uma pesquisa detalhada de diversas classes da terra que incidem nas cidades analisadas.
+                A relevância didática e informacional produizada nessa etapa gera frutos analíticos que servem para o governo e a sociedade civíl estudarem, perceberm insights e tendências sobre o uso e cobertura da terra na Microrregião de Divinópolis.
+                </p>
+                </div>
+                <!--===== COLEÇÃO DE MAPAS -->
+            <section>
+                <section class="timemobile">
+                    <img src="../images/imagens_mapa/MAP1985.png" class="map">
+                    <img src="../images/imagens_mapa/MAP1990.png" class="map">
+                    <img src="../images/imagens_mapa/MAP2000.png" class="map">
+                    <img src="../images/imagens_mapa/MAP2010.png" class="map">
+                    <img src="../images/imagens_mapa/MAP2020.png" class="map">
+                </section>
+                <section class="timedesktop">
+                    <div class="page">
+                        <div class="timeline">
+                          <div class="timeline__group">
+                            <span class="timeline__year time" aria-hidden="true">1985</span>
+                            <div class="timeline__cards">
+                              <div class="timeline__card card" width="100%">
+                                <img src="../images/imagens_mapa/MAP1985.png" class="map">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="timeline__group">
+                            <span class="timeline__year time" aria-hidden="true">1990</span>
+                            <div class="timeline__cards">
+                              <div class="timeline__card card">
+                                <img src="../images/imagens_mapa/MAP1990.png" class="map">
+                              </div>
+                            </div>
+                          </div>    
+                          <div class="timeline__group">
+                            <span class="timeline__year time" aria-hidden="true">2000</span>
+                            <div class="timeline__cards">
+                              <div class="timeline__card card">
+                                <img src="../images/imagens_mapa/MAP2000.png" class="map">
+                              </div>
+                            </div>
+                          </div>
+                            <div class="timeline__group">
+                            <span class="timeline__year time" aria-hidden="true">2010</span>
+                            <div class="timeline__cards">
+                              <div class="timeline__card card">
+                                <img src="../images/imagens_mapa/MAP2010.png" class="map">
+                              </div>
+                            </div>
+                          </div>
+                              <div class="timeline__group">
+                            <span class="timeline__year time" aria-hidden="true">2020</span>
+                            <div class="timeline__cards">
+                              <div class="timeline__card card">
+                                <img src="../images/imagens_mapa/MAP2020.png" class="map">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>                      
+                </section>
+            </section>
+                <!-- ====== FIM COLEÇÃO ===== -->
+                <section class="title">
+                    <h2 class="title">Animação</h2>
+                    <div class="linewhite"></div>
+
+                    <div class="texto"><p>Animação por meio de GIF com a sobreposição de todos os mapas da série
+                    histórica (1985, 1990, 2000, 2010 e 2020).</p></div>
+                    <img src="../images/imagens_mapa/GIF.gif" class="map" style="padding-bottom: 50px;">  
+                </section>
+                <section class="title">
+                    <h2 class="title">Relato em Vídeo</h2>
+                    <div class="linewhite"></div>
+                    <div class="texto"><p>A equipe realizou um relato em vídeo e distruiu através do YouTube para contar um pouco sobre o processo de 
+                        desenvolvimento dessa fase da etapa II fase II da OBRAC 2021.</p></div>
+                    <section class="video">
+                        <iframe class="iframe" src="https://www.youtube.com/embed/5VBfQj7M3VM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; gyroscope" allowfullscreen></iframe>
+                    </section>
+                </section>
+                <hr>
+                <br>
+                    <p>Quer saber mais detalhes sobre como foi todo o processo de produção dessa etapa? <br>Confira nossos arquivos e relatórios.</p>
+                        <div class="btn-group dropup" >
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-mdb-toggle="dropdown" aria-expanded="false" style="background-color: #488188;">
+                              Arquivos
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="../docs/Relato_ Atividade_Coleção_de_Mapas_.pdf" target="_blank">Relatório</a></li>
+                            </ul>
+                          </div>
+            </section>
+        </main>
+        <!--=============== RODAPÉ ===========-->
+        <footer id="myFooter" class="footer">
+            <div class="footer-social">
+                <a href="https://programadorviking.com.br/" class="social-icons"><i class="fa fa-facebook"></i></a>
+                <a href="https://programadorviking.com.br/" class="social-icons"><i class="fa fa-instagram"></i></a>
+                <a href="https://programadorviking.com.br/" class="social-icons"><i class="fa fa-youtube"></i></a>
+                <p class="footer-copyright">© 2022 - Centro Federal de Educação Tecnológica de Minas Gerais</p>
+              </div>
+          </footer>
+        <!--========== MAIN JS ==========-->
+        <script src="../js/app.js"></script>
+    </body>
+</html>

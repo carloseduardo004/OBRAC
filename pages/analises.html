@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--========== CSS ==========-->
+        <link rel="stylesheet" href="../css/style.css">       
+        <link rel="icon" href="../images/icon.png">     
+        <title>Análises</title>
+    </head>
+    <body>
+        <div class="header__toggle">
+            <i class='bx bx-menu' id="header-toggle"></i>
+        </div>
+        <!--========== HEADER ==========-->
+        <header class="header">
+            <div class="header__container">
+                <a href="http://olimpiadadecartografia.uff.br/"><img src="../images/obrac.png" alt="" class="header__img obrac"></a>
+                <a href="https://www.cefetmg.br/"><img src="../images/cefet.png" alt="" class="header__img cefet"></a>
+                <a href="https://www.gov.br/cnpq/pt-br"><img src="../images/cnpq.png" alt="" class="header__img cnpq"></a>
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+        </header>
+        <!--========== NAV ==========-->
+        <div class="nav" id="navbar">
+            <nav class="nav__container">
+                <div>
+                    <a class="nav__logo">
+                        <i class='bx bx-menu nav__icon' ></i>
+                        <span class="nav__logo-name">Menu</span>
+                    </a>
+    
+                    <div class="nav__list">
+                        <div class="nav__items">
+                            <br>
+                            <br>
+                            <a href="#" class="nav__link" onclick="home();">
+                                <i class='bx bx-home nav__icon' ></i>
+                                <span class="nav__name">Início</span>
+                            </a>
+                            <div class="nav__dropdown">
+                                <a href="#" class="nav__link">
+                                    <i class='bx bx-map-alt nav__icon' ></i>
+                                    <span class="nav__name">Mapas</span>
+                                    <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                                </a>
+
+                                <div class="nav__dropdown-collapse">
+                                    <div class="nav__dropdown-content">
+                                        <a href="#" class="nav__dropdown-item" onclick="click2020();">2020</a>
+                                        <a href="#" class="nav__dropdown-item" onclick="click2010();">2010</a>
+                                        <a href="#" class="nav__dropdown-item" onclick="click2000();">2000</a>
+                                        <a href="#" class="nav__dropdown-item" onclick="click1990();">1990</a>
+                                        <a href="#" class="nav__dropdown-item" onclick="click1985();">1985</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="nav__link active" onclick="clickanalise();">
+                                <i class='bx bx-pie-chart-alt-2 nav__icon' ></i>
+                                <span class="nav__name">Análises</span>
+                            </a>
+                           
+                        </div>
+    
+                        <div class="nav__items">
+                            <h3 class="nav__subtitle">OBRAC 2021</h3>
+                            <a href="#" class="nav__link" onclick="clickcurta();">
+                                <i class='bx bx-camera-movie nav__icon' ></i>
+                                <span class="nav__name">Curta Metragem</span>
+                            </a>
+
+                            <a href="#" class="nav__link" onclick="clickcolecao();">
+                                <i class='bx bx-compass nav__icon' ></i>
+                                <span class="nav__name">Coleção de Mapas</span>
+                            </a>
+                            <a href="#" class="nav__link" onclick="clickfasefinal();">
+                                <i class='bx bx-run nav__icon' ></i>
+                                <span class="nav__name">Fase Final</span>
+                            </a>
+
+                            <a href="#" class="nav__link" onclick="clicksobrenos();">
+                                <i class='bx bx-male-female nav__icon' ></i>
+                                <span class="nav__name">Sobre Nós</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav__logout">
+                    <div class="nav__name"><i class='bx bx-trophy nav__icon'></i>Equipe de Milhões<br> OBRAC 2021</div>
+                  </div>
+                </div>
+            </nav>
+        </div>
+        <!--========== CONTENTS ==========-->
+        <main>
+            <section class="analises">
+                <div class="column">
+                <section class="legenda">
+                    <h1 class="graficotitle"><span class="grafico-title">AGROPECUÁRIA</span></h1>
+                    <section class="categorias">
+                        <input class="checkbox-tools" type="radio" name="categoria" id="agropecuaria" value="agropecuária" checked onchange="updateChart();">
+						<label class="for-checkbox-tools" for="agropecuaria">
+							<i class='uil uil-vector-square'></i>
+							AGROPECUÁRIA
+						</label><!--
+						--><input class="checkbox-tools" type="radio" name="categoria" id="agua" value="água" onchange="updateChart();">
+						<label class="for-checkbox-tools" for="agua">
+							<i class='uil uil-ruler'></i>
+							ÁGUA
+						</label><!--
+						--><input class="checkbox-tools urba" type="radio" name="categoria" id="area urbanizada" value="área urbanizada" onchange="updateChart();">
+						<label class="for-checkbox-tools" for="area urbanizada" style="  padding-top:1%;">
+							<i class='uil uil-crop-alt'></i>
+							ÁREA URBANIZADA
+						</label><!--
+						--><input class="checkbox-tools" type="radio" name="categoria" id="floresta" value="floresta" onchange="updateChart();">
+						<label class="for-checkbox-tools" for="floresta">
+							<i class='uil uil-brush-alt'></i>
+							FLORESTA
+						</label><!--
+						--><input class="checkbox-tools" type="radio" name="categoria" id="populacao" value="população" onchange="updateChart();">
+						<label class="for-checkbox-tools" for="populacao">
+							<i class='uil uil-image-resize-landscape'></i>
+							POPULAÇÃO
+						</label>
+
+
+                    </section>
+                    <form class="form">
+                    <!--ESCOLHER MUNICÍPIO:-->
+                    <label class="label">Município:</label>
+                        <select class="form-select selectpicker" id="cidade" name="cidade" onchange="updateChart();">
+                        <option hidden>Escolha uma opção</option>
+                        <option value="carmo do cajuru">Carmo do Cajuru</option>
+                        <option value="cláudio">Cláudio</option>
+                        <option value="conceição do pará">Conceição do Pará</option>
+                        <option value="divinópolis">Divinópolis</option>
+                        <option value="igaratinga">Igaratinga</option>
+                        <option value="itaúna">Itaúna</option>
+                        <option value="nova serrana">Nova Serrana</option>
+                        <option value="perdigão">Perdigão</option>
+                        <option value="santo antônio do monte">Santo Antônio do Monte</option>
+                        <option value="são gonçalo do pará">São Gonçalo do Pará</option>
+                        <option value="são sebastião do oeste">São Sebastião do Oeste</option>
+                      </select>
+                    <!--UNIDADE DE MEDIDA:-->
+                    <label class="label">Unidade de medida:</label><br>
+                        <!--AGRO,AGUA,URBAN,FLORESTA-->
+                      <div class="form-check-inline geraismedida">
+                        <div class="radio-item">
+                            <input type="radio" id="hectares" name="medida" value="ha" checked onchange="updateChart();">
+                            <label for="hectares" class="labelr">Hectares (Ha)</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="km" name="medida" value="km²"  onchange="updateChart();">
+                            <label for="km" class="labelr">Quilômetros Quadrados (Km²)</label>
+                        </div>
+                      </div>
+
+                    <!--POPULAÇÃO-->
+                      <div class="form-check-inline populacaomedida">
+                        <div class="radio-item">
+                            <input type="radio" id="feminino/masculino" name="medidap" value="rural urbana" checked onchange="updateChart();">
+                            <label for="feminino/masculino" class="labelr">Rural/Urbana</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="rural/urbano" name="medidap" value="feminino masculino" onchange="updateChart();">
+                            <label for="rural/urbano" class="labelr">Feminina/Masculina</label>
+                        </div>
+                      </div>
+                    <br>
+                    <!--ESCOLHER ANOS-->
+                    <label class="label">Série histórica:</label><br>
+                    <!--AGRO,AGUA,URBAN,FLORESTA-->
+                    <div class="geraisano">
+                        <div class="form-check-inline">
+                        <label class="container anos">1985
+                            <input type="checkbox" name="anos" id="ano1985" value="1985" checked onchange="updateChart();">
+                            <span class="checkmark"></span>
+                        </label>
+                        </div>
+                        <div class="form-check-inline">
+                        <label class="container anos">1990
+                            <input type="checkbox" name="anos" id="ano1990" checked value="1990" onchange="updateChart();">
+                            <span class="checkmark"></span>
+                        </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <label class="container anos">2000
+                                <input type="checkbox" name="anos" id="ano2000" checked value="2000" onchange="updateChart();">
+                                <span class="checkmark"></span>
+                            </label>
+                            </div>
+                            <div class="form-check-inline">
+                            <label class="container anos">2010
+                                <input type="checkbox" name="anos" id="ano2010" checked value="2010" onchange="updateChart();">
+                                <span class="checkmark"></span>
+                            </label>
+                            </div> 
+                                <div class="form-check-inline">
+                                <label class="container anos">2020
+                                    <input type="checkbox" name="anos" id="ano2020" checked value="2020" onchange="updateChart();">
+                                    <span class="checkmark"></span>
+                                </label>
+                                </div>
+                        </div>
+                        <!--POPULAÇÃO-->
+                        <div class="populacaoano">
+                            <div class="form-check-inline">
+                                <div class="radio-item">
+                                    <input type="radio" id="anos1985" name="anosp" value="1980" checked onchange="updateChart();">
+                                    <label for="anos1985" class="labelr">1980</label>
+                                </div>
+                                <div class="radio-item">
+                                    <input type="radio" id="anosp1990" name="anosp" value="1990" onchange="updateChart();">
+                                    <label for="anosp1990" class="labelr">1990</label>
+                                </div>
+                                <div class="radio-item">
+                                    <input type="radio" id="anosp2000" name="anosp" value="2000" onchange="updateChart();">
+                                    <label for="anosp2000" class="labelr">2000</label>
+                                </div>
+                                <div class="radio-item">
+                                    <input type="radio" id="anosp2010" name="anosp" value="2010" onchange="updateChart();">
+                                    <label for="anosp2010" class="labelr">2010</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+                </div>
+                <div class="column e">
+                <section class="content" >
+                <div class="graficos" id="geraisChart"><canvas id="myChart"></canvas></div>
+                <div class="graficos" id="populacaoChart" style="display: none;"><canvas id="myChartPopulacao" ></canvas></div>
+                </section>
+                </div>
+            </section>
+        </main>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+        <script>
+            const chartgerais = document.querySelector('#geraisChart');
+            const chartpopulacao=document.querySelector('#populacaoChart');
+            
+          function updateChart(){             
+            async function fetchData(){
+                const url= '../js/data.json';
+                const response = await fetch(url);
+                const datapoints = await response.json();
+                //console.log(datapoints);
+                return datapoints;
+              };
+                                
+              fetchData().then(datapoints =>{
+                //PEGAR CIDADE
+                const city = document.getElementById("cidade").value;
+
+                //TÍTULO DO GRÁFICO
+                if(city!="Escolha uma opção"){
+                    //NOME DA CIDADE MAIÚSCULO
+                    var cidade = document.getElementById("cidade").value;
+                    const titulocidade = cidade.split(" ");
+                    for (let i = 0; i < titulocidade.length; i++) {
+                        titulocidade[i] = titulocidade[i][0].toUpperCase() + titulocidade[i].substr(1);
+                    }
+                    cidade = cidade[0].toUpperCase() + cidade.substring(1);
+                    
+                    //NOME CATEGORIA MAÍUSCULO
+                    var catg = document.querySelector('input[name="categoria"]:checked').value;
+                    const titulocategoria = catg.split(" ");
+                    for (let i = 0; i < titulocategoria.length; i++) {
+                        titulocategoria[i] = titulocategoria[i][0].toUpperCase() + titulocategoria[i].substr(1);
+                    }
+                    catg = catg[0].toUpperCase() + catg.substring(1);
+
+                    //ANO GRÁFICO POPULAÇÃO
+                    var anop = document.querySelector('input[name="anosp"]:checked').value;
+
+                    //MOSTRAR TÍTULO
+                    myChart.config.options.title.text='Gráfico '+titulocategoria.join(" ")+': '+titulocidade.join(" ");
+                    myChartPopulacao.config.options.title.text='Gráfico '+titulocategoria.join(" ")+': '+titulocidade.join(" ")+' - '+anop;
+                }
+
+                //PEGAR CATEGORIA
+                const categoria = document.querySelector('input[name="categoria"]:checked').value;
+
+                //TITULO DA CATEGORIA
+                const title = document.querySelector('.grafico-title');
+                title.innerHTML=categoria.toUpperCase();
+                //MODIFICAR DADOS DE ACORDO COM CATEGORIA
+                if(categoria!="população")
+                {//ESCONDER GRÁFICO DA POPULAÇÃO
+                    chartgerais.style.cssText='display:block;';
+                    chartpopulacao.style.cssText='display:none;';
+                    
+                    const geraisano = document.querySelector('.geraisano').style.cssText= 'display:block';
+                    const populacaoano =document.querySelector('.populacaoano').style.cssText= 'display:none';
+                    const geraismedida= document.querySelector('.geraismedida').style.cssText= 'display:block';
+                    const populacaomedida=document.querySelector('.populacaomedida').style.cssText= 'display:none';
+
+                //PEGAR ANOS
+                const anos =[];
+                $("anos").click(
+                    $.each($("input[name='anos']:checked"), function(){            
+                        anos.push($(this).val());
+                    }),);
+
+                //PEGAR MEDIDA
+                const medida = document.querySelector('input[name="medida"]:checked').value;
+
+                //PEGAR DADOS DO ANO
+                const data = [];
+                for(let i=0; i < anos.length; i++)
+                {
+                    data[i]=datapoints[categoria][medida][city][anos[i]];
+                }
+
+                //MODIFICAR OS DADOS NO GRÁFICO
+                myChart.config.data.labels = anos;
+                myChart.config.data.datasets[0].data= data;
+                myChart.config.data.datasets[0].label= medida;
+                myChart.config.type='bar';
+                myChart.update(anos);
+
+                //REINICIAR ANIMAÇÃO DO GRÁFICO POPULAÇÃO
+                myChartPopulacao.config.data.labels=null;
+                myChartPopulacao.config.data.datasets[0].data=null;
+                myChartPopulacao.update();
+            }else{//ESCONDER GRÁFICO DAS OUTRAS CATEGORIAS
+                    chartgerais.style.cssText='display:none;';
+                    chartpopulacao.style.cssText='display:block;';
+
+                    const geraisano = document.querySelector('.geraisano').style.cssText= 'display:none';
+                    const populacaoano =document.querySelector('.populacaoano').style.cssText= 'display:block';
+                    const geraismedida= document.querySelector('.geraismedida').style.cssText= 'display:none';
+                    const populacaomedida=document.querySelector('.populacaomedida').style.cssText= 'display:block';
+                    //PEGAR MEDIDA
+                    const m = document.querySelector('input[name="medidap"]:checked').value;
+                    const medidap = m.split(" ");
+                    //PEGAR ANO
+                    var anop=[];
+                     anop = document.querySelector('input[name="anosp"]:checked').value;
+                    //PEGAR DADOS DO ANO
+                    const datap=[];
+                    for(let i=0; i < medidap.length; i++){
+                   datap[i]=datapoints[categoria][medidap[i]][city][anop];
+                    }
+                    myChartPopulacao.config.data.labels=medidap;
+                    myChartPopulacao.config.data.datasets[0].data=datap;
+                    myChartPopulacao.update();
+            }  
+              });                
+            }
+
+            const ctx = document.getElementById('myChart').getContext('2d');
+            const myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: [],
+                    datasets: [{
+                        label: [],
+                        data: [],
+                        backgroundColor: [
+                            '#79D1CF',
+                            '#79D1CF',
+                            '#79D1CF',
+                            '#79D1CF',
+                            '#79D1CF',   
+                        ],
+                        borderColor: [
+                            '#488188',
+                            '#488188',
+                            '#488188',
+                            '#488188',
+                            '#488188'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {    
+                responsive:true,
+                maintainAspectRatio:false,
+                title:{
+                    display:true,
+                    text:'',
+                    fontColor:'#488188',
+                    fontSize:20,
+                    padding: 10,
+                },      
+                layout: {
+                            padding: 20,
+                        },
+                 legend: {
+                        display: false
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            const customDatalabels={
+                id:'customDatalabels',
+                afterDatasetsDraw(chart, args, pluginOptions){
+                    const {ctx, data, chartArea:{top,bottom,left,right,width,height}} = chart;
+                    ctx.save();
+                    const halfWidth =width/2 + left;
+                    const halfHeight = height/2 +top;
+                    const total = data.datasets[0].data[0]+data.datasets[0].data[1];
+                    data.datasets[0].data.forEach((datapoint,index)=>{
+                        const {x, y}=chart.getDatasetMeta(0).data[index].tooltipPosition()
+                        ctx.font='bold 19px sans-serif';
+                        ctx.textAlign='center';
+                        ctx.textBaseline='middle';
+                        ctx.fillStyle='#fff';
+
+                        if((datapoint/total * 100) >= 10){
+                        ctx.fillText((datapoint/total * 100).toFixed(1)+'%', x, y);
+                        //data.datasets[0].borderColor[index];
+                        }else{
+                            
+                            const xLine=x>=halfWidth ? x +25 : x  +60;
+                            const yLine=y>=halfHeight ? y +60 : y -80;
+                            const extraLine=x>=halfWidth?60:50;
+                            const textWidth = ctx.measureText(datapoint).width;
+                            const textWidthPosition = x <= halfWidth ? textWidth:textWidth-10;
+                            ctx.strokeStyle=data.datasets[0].borderColor[index];
+                            ctx.beginPath();
+                            ctx.moveTo(x,y);
+                            ctx.lineTo(xLine, yLine);
+                            ctx.lineTo(xLine+extraLine,yLine);
+                            ctx.fillStyle='#499CA6';
+                            ctx.stroke();
+                            ctx.fillText((datapoint/total * 100).toFixed(1)+'%',xLine+extraLine+textWidthPosition,yLine);
+                        }
+                        
+                    })
+                }
+            }
+
+            const ctxx = document.getElementById('myChartPopulacao');
+                    const myChartPopulacao = new Chart(ctxx,{
+                        type: 'doughnut',
+                        data: {
+                            labels: [],
+                            datasets: [{
+                                label: [],
+                                data: [],
+                                backgroundColor: [
+                                    '#79D1CF',
+                                    '#499CA6'
+                                ],
+                                borderColor: [
+                                    '#488188',
+                                    '#488188',
+                                ],
+                                borderWidth: 0.5
+                            }]
+                        },
+                        options: {    
+                        responsive:true,
+                        maintainAspectRatio:false,
+                        title:{
+                    display:true,
+                    text:'',
+                    fontColor:'#488188',
+                    fontSize:20,
+                },
+                        layout: {
+                            padding: 20,
+                        },
+                        
+                        },
+                        plugins:[customDatalabels]
+                    });
+           
+            </script>    
+          <!--=============== RODAPÉ ===========-->
+        <footer id="myFooter" class="footer">
+            <div class="footer-social">
+                <a href="https://mapbiomas.org/" class="social-icons"><i class="fad"><img src="../images/mapbiomas.png"></i></a>
+                <a href="https://www.ibge.gov.br/estatisticas/sociais/populacao/22827-censo-2020-censo4.html?=&t=destaques" class="social-icons"><i class="fad"><img src="../images/ibge.png" ></i></a>
+                <p class="footer-copyright">
+                    "Coleção de SIGWEBS da Microrregião de Divinópolis, acessado em 21/06/2022 através do link: https://mapbiomas.org/"<br>
+                    "Projeto MapBiomas - é uma iniciativa multi-institucional para gerar mapas anuais de cobertura e uso do solo a partir de processos de classificação automática aplicada a imagens de satélite.”
+                    </p>
+                <p class="footer-copyright">
+                INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍTICA - IBGE. Censo Demográfico 1980 - 2010. Disponível em: https://www.ibge.gov.br/estatisticas/sociais/populacao/22827-censo-2020-censo4.html?=&t=destaques               </p>
+                <p class="footer-copyright">© 2022 - Centro Federal de Educação Tecnológica de Minas Gerais</p>
+              </div>
+          </footer>
+    
+        <!--========== MAIN JS ==========-->
+        <script src="../js/app.js"></script>
+    </body>
+</html>
